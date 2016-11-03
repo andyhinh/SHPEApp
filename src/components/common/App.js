@@ -14,6 +14,11 @@ const goNotifications = (e) => {
   browserHistory.push('/notifications');
 }
 
+const goSettings = (e) => {
+  e.preventDefault();
+  browserHistory.push('/settings');
+}
+
 const logOut = (e) => {
   e.preventDefault();
   browserHistory.push('/login');
@@ -22,7 +27,7 @@ const logOut = (e) => {
 const App = (props) => (
   <div>
     <AppBar
-      title='Placeholder'
+      title='SHPE App'
       iconElementRight={<FontIcon className="material-icons">power_settings_new</FontIcon>}
       iconStyleRight={{paddingTop: 10, paddingRight: 10}}
       onRightIconButtonTouchTap={logOut}
@@ -33,6 +38,7 @@ const App = (props) => (
       <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
         <MenuItem onTouchTap={goHome}>Users</MenuItem>
         <MenuItem onTouchTap={goNotifications}>Notifications</MenuItem>
+        <MenuItem onTouchTap={goSettings}>Settings</MenuItem>
       </Drawer>
       {props.children}
     </div>

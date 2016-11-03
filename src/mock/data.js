@@ -1,5 +1,6 @@
 export const workers = [{
   name: "Jeff",
+  status: "Active",
   value: [{
     time: "10:00AM",
     heartRate: 70,
@@ -17,13 +18,14 @@ export const workers = [{
     steps: 670
   }, {
     time: "11:30AM",
-    heartRate: 120,
+    heartRate: 161,
     temperature: 98,
     steps: 800
   }]
 },
 {
   name: "Steve",
+  status: "Active",
   value: [{
     time: "10:00AM",
     heartRate: 70,
@@ -43,6 +45,6 @@ export const workers = [{
     time: "11:30AM",
     heartRate: 60,
     temperature: 98,
-    steps: 800
+    steps: 1000
   }]
 }];
