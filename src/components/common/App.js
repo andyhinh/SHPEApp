@@ -13,6 +13,11 @@ const goNotifications = (e) => {
   browserHistory.push('/notifications');
 }
 
+const logOut = (e) => {
+  e.preventDefault();
+  browserHistory.push('/login');
+}
+
 const App = (props) => (
   <div>
     <AppBar
@@ -24,7 +29,7 @@ const App = (props) => (
       <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
         <MenuItem onTouchTap={goHome}>Users</MenuItem>
         <MenuItem onTouchTap={goNotifications}>Notifications</MenuItem>
-        <MenuItem>Log Out</MenuItem>
+        <MenuItem onTouchTap={logOut}>Log Out</MenuItem>
       </Drawer>
       {props.children}
     </div>
