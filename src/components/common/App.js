@@ -18,6 +18,7 @@ const App = (props) => (
     <AppBar
       title='Placeholder'
       showMenuIconButton={false}
+      style={{'zIndex':'9999'}}
     />
     <div className="App">
       <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
