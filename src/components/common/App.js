@@ -23,8 +23,9 @@ const App = (props) => (
   <div>
     <AppBar
       title='Placeholder'
-      iconElementRight={<FontIcon className="material-icons">more_vert</FontIcon>}
-      iconStyleRight={{paddingTop: 10}}
+      iconElementRight={<FontIcon className="material-icons">power_settings_new</FontIcon>}
+      iconStyleRight={{paddingTop: 10, paddingRight: 10}}
+      onRightIconButtonTouchTap={logOut}
       showMenuIconButton={false}
       style={{'zIndex':'9999'}}
     />
@@ -32,7 +33,6 @@ const App = (props) => (
       <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
         <MenuItem onTouchTap={goHome}>Users</MenuItem>
         <MenuItem onTouchTap={goNotifications}>Notifications</MenuItem>
-        <MenuItem onTouchTap={logOut}>Log Out</MenuItem>
       </Drawer>
       {props.children}
     </div>

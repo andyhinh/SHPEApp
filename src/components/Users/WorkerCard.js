@@ -26,6 +26,7 @@ const WorkerCard = (props) => (
         <Line type="monotone" dataKey="heartRate" stroke="#8884d8"/>
         <Line type="monotone" dataKey="temperature" stroke="#82ca9d"/>
       </LineChart>
+      <div>Testing</div>
     </CardText>
   </Card>
 )
