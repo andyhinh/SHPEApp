@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import {Card, CardHeader, CardText} from 'material-ui';
+import {Card, CardHeader, CardText, Drawer} from 'material-ui';
 import { LineChart, XAxis, YAxis, ToolTip, CartesianGrid, Line } from 'recharts';
 import { workers } from './mock/data';
 
 export default class WorkerCard extends Component {
   render() {
     var cards = workers.map(function(worker) {
-      return <Card>
+      return <Card style={{marginLeft: 256 + 32, marginRight: 32, marginTop: 10}}>
         <CardHeader
           title={worker.name}
           actAsExpander={true}

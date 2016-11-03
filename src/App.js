@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
+import { AppBar, Drawer, MenuItem } from 'material-ui';
 import logo from './logo.svg';
 import './App.css';
 import WorkerCard from './WorkerCard';
 
+// const drawerStyles = {
+//   height: calc(100% - <AppBar.height>),
+//   bottom: 0
+// };
 
 class App extends Component {
   render() {
     return (
+    <div>
+      <AppBar
+        title='Placeholder'
+  
+    showMenuIconButton={false}
+      />
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <WorkerCard />
+        <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
+          <MenuItem>Users</MenuItem>
+          <MenuItem>Notifications</MenuItem>
+          <MenuItem>Log Out</MenuItem>
+        </Drawer>
+        <WorkerCard/>
 
       </div>
+    </div>
     );
   }
 }
