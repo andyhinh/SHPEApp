@@ -15,7 +15,6 @@ class App extends Component {
     <div>
       <AppBar
         title='Placeholder'
-  
     showMenuIconButton={false}
       />
       <div className="App">
