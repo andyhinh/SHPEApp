@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Card, CardActions, CardHeader, CardText, FlatButton} from 'material-ui';
+import { LineChart, XAxis, YAxis, ToolTip, CartesianGrid, Line } from 'recharts';
 
 const data = [{
   name: "10:00AM",

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import WorkerCard from './WorkerCard';
-import { LineChart, XAxis, YAxis, ToolTip, CartesianGrid, Line } from 'recharts';
+
 
 class App extends Component {
   render() {
