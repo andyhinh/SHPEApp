@@ -6,6 +6,7 @@ import { LineChart, XAxis, YAxis, ToolTip, CartesianGrid, Line } from 'recharts'
 const WorkerCard = (props) => (
   <Card style={{marginLeft: 256 + 32, marginRight: 32, marginTop: 10}}>
     <CardHeader
+      avatar="../../../img/profile.svg"
       title={props.worker.name}
       actAsExpander={true}
       showExpandableButton={true}
@@ -14,7 +15,7 @@ const WorkerCard = (props) => (
       {props.worker.value[props.worker.value.length-1].heartRate}
       <FontIcon className="material-icons">favorite</FontIcon><br />
       {props.worker.value[props.worker.value.length-1].temperature}
-      <FontIcon className="material-icons">info</FontIcon>
+      <FontIcon className="material-icons">cloud</FontIcon>
     </CardText>
     <CardText expandable={true}>
       <LineChart width={600} height={300} data={props.worker.value} margin={{top: 5, right:30, left:20, bottom: 5}}>

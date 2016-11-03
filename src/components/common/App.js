@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import FontIcon from 'material-ui/FontIcon';
 import { AppBar, Drawer, MenuItem } from 'material-ui';
 import { browserHistory } from 'react-router';
 import './App.css';
@@ -22,6 +23,8 @@ const App = (props) => (
   <div>
     <AppBar
       title='Placeholder'
+      iconElementRight={<FontIcon className="material-icons">more_vert</FontIcon>}
+      iconStyleRight={{paddingTop: 10}}
       showMenuIconButton={false}
       style={{'zIndex':'9999'}}
     />
