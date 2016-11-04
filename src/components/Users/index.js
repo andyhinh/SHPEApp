@@ -13,8 +13,8 @@ class Users extends Component {
       let { employees } = this.state;
       employees[0].value.push({
         time: moment().format("h:mm A"),
-        heartRate: Math.random() * 100,
-        temperature: 98,
+        heartRate: (Math.random() * 120) + 60,
+        temperature: (Math.random() * 20) + 80,
         steps: 800
       });
 			this.setState({employees});
