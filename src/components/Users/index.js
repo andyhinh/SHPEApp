@@ -15,7 +15,7 @@ class Users extends Component {
     setInterval(() => {
       let { employees } = this.state;
       employees[0].value.push({
-        time: moment().format("h:mm:ss A"),
+        time: moment().format("h:mm A"),
         heartRate: Math.random() * 100,
         temperature: 98,
         steps: 800

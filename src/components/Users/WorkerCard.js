@@ -14,13 +14,13 @@ const WorkerCard = (props) => (
       showExpandableButton={true}
       style={props.worker.value[props.worker.value.length-1].heartRate > 160
         ? {backgroundColor: "red"}
-        : {backgroundColor: "white"}}
+        : {backgroundColor: "green"}}
     />
 
     <CardText>
-      {props.worker.value[props.worker.value.length-1].heartRate}
+      Heart Rate: {props.worker.value[props.worker.value.length-1].heartRate}
       <FontIcon className="material-icons">favorite</FontIcon><br />
-      {props.worker.value[props.worker.value.length-1].temperature} &nbsp;
+      Temperature: {props.worker.value[props.worker.value.length-1].temperature} &nbsp;
       <FontIcon className="material-icons">cloud</FontIcon>
     </CardText>
 
