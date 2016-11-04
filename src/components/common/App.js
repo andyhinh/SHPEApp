@@ -19,6 +19,11 @@ const goSettings = (e) => {
   browserHistory.push('/settings');
 }
 
+const goForecast = (e) => {
+  e.preventDefault();
+  browserHistory.push('/forecast');
+}
+
 const logOut = (e) => {
   e.preventDefault();
   browserHistory.push('/login');
@@ -38,6 +43,7 @@ const App = (props) => (
       <Drawer open={true} zDepth={1} containerStyle={{'position': 'absolute', 'top': '64px', 'textAlign': 'left'}}>
         <MenuItem onTouchTap={goHome}>Users</MenuItem>
         <MenuItem onTouchTap={goNotifications}>Notifications</MenuItem>
+        <MenuItem onTouchTap={goForecast}>Forecast</MenuItem>
         <MenuItem onTouchTap={goSettings}>Settings</MenuItem>
       </Drawer>
       {props.children}
