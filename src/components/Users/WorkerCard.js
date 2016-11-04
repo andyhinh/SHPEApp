@@ -13,8 +13,8 @@ const WorkerCard = (props) => (
       actAsExpander={true}
       showExpandableButton={true}
       style={props.worker.value[props.worker.value.length-1].heartRate > 150
-              || props.worker.value[props.worker.value.length-1].temperature > 99
-              || props.worker.value[props.worker.value.length-1].temperature < 96
+              || props.worker.value[props.worker.value.length-1].temperature > 99.5
+              || props.worker.value[props.worker.value.length-1].temperature < 95.5
         ? {backgroundColor: "red", paddingLeft: 90}
         : props.worker.value[props.worker.value.length-1].heartRate > 120
           ? {backgroundColor: "orange", paddingLeft: 90}
