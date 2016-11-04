@@ -47,4 +47,14 @@ export const workers = [{
     temperature: 98,
     steps: 1000
   }]
+},
+{
+  name: "Andy",
+  status: "Active",
+  value: [{
+    time: "5:00AM",
+    heartRate: 70,
+    temperature: 98,
+    steps: 100
+  }]
 }];

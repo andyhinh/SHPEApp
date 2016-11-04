@@ -14,7 +14,9 @@ const WorkerCard = (props) => (
       showExpandableButton={true}
       style={props.worker.value[props.worker.value.length-1].heartRate > 150
         ? {backgroundColor: "red", paddingLeft: 90}
-        : {backgroundColor: "green", paddingLeft: 90}}
+        : props.worker.value[props.worker.value.length-1].heartRate > 120
+          ? {backgroundColor: "orange", paddingLeft: 90}
+          : {backgroundColor: "green", paddingLeft: 90}}
     />
 
     <CardText>
