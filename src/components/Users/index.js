@@ -14,19 +14,19 @@ class Users extends Component {
       employees[0].value.push({
         time: moment().format("h:mm A"),
         heartRate: (Math.random() * 110) + 70,
-        temperature: (Math.random() * 5) + 95,
+        temperature: (Math.random() * 6) + 96,
         steps: (Math.random() * 1500) + 500
       });
       employees[1].value.push({
         time: moment().format("h:mm A"),
         heartRate: (Math.random() * 110) + 70,
-        temperature: (Math.random() * 5) + 95,
+        temperature: (Math.random() * 6) + 96,
         steps: (Math.random() * 2000) + 500
       });
       employees[2].value.push({
         time: moment().format("h:mm A"),
         heartRate: (Math.random() * 110) + 70,
-        temperature: (Math.random() * 5) + 95,
+        temperature: (Math.random() * 6) + 96,
         steps: (Math.random() * 2000) + 500
       });
 			this.setState({employees});
