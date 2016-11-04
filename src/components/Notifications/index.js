@@ -11,19 +11,21 @@ export default class Notifications extends React.Component {
   }
 
   addAlert = (a) => {
-    a.preventDefault();
-    let arrayAlert = this.state.alerts;
+    if (window.confirm("Sending this: "+ this._inputElement.value + "\nTo Everyone. Are you sure?")) {
+      a.preventDefault();
+      let arrayAlert = this.state.alerts;
 
-    arrayAlert.push({
-      text: this._inputElement.value,
-      key: Date.now()
-    });
+      arrayAlert.push({
+        text: this._inputElement.value,
+        key: Date.now()
+      });
 
-    this.setState({
-      alerts: arrayAlert
-    });
+      this.setState({
+        alerts: arrayAlert
+      });
 
-    this._inputElement.value = "";
+      this._inputElement.value = "";
+    }
   }
 
   render() {

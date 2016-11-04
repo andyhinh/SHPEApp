@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { TextField, RaisedButton } from 'material-ui';
+import { login } from '../../mock/login';
 import './Login.css';
 
 class Login extends Component {
@@ -27,9 +28,9 @@ class Login extends Component {
   onSubmit(e) {
     e.preventDefault();
     const { username, password } = this.state;
-    if (username.length > 0 && password.length > 0) {
-      browserHistory.push('/');
-    }
+    username === login[0].username && password === login[0].password
+      ? browserHistory.push('/')
+      : window.alert("Wrong Information!")
   }
   render() {
     return (
