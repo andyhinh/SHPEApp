@@ -9,10 +9,7 @@ class Users extends Component {
     this.state = {
       employees: workers
     };
-  }
-
-  componentDidMount() {
-    setInterval(() => {
+		setInterval(() => {
       let { employees } = this.state;
       employees[0].value.push({
         time: moment().format("h:mm A"),
@@ -20,10 +17,12 @@ class Users extends Component {
         temperature: 98,
         steps: 800
       });
+			this.setState({employees});
     }, 10000);
   }
   render() {
-    var cards = this.state.employees.map((worker) => <WorkerCard worker={worker}/>);
+    let cards = this.state.employees.map((worker, key) => <WorkerCard worker={worker} key={key}/>);
+		console.log([cards]);
     return (
       <div>{cards}</div>
     );
