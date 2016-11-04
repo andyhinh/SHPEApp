@@ -12,7 +12,7 @@ const WorkerCard = (props) => (
       title={props.worker.name}
       actAsExpander={true}
       showExpandableButton={true}
-      style={props.worker.value[props.worker.value.length-1].heartRate > 160
+      style={props.worker.value[props.worker.value.length-1].heartRate > 150
         ? {backgroundColor: "red", paddingLeft: 90}
         : {backgroundColor: "green", paddingLeft: 90}}
     />
@@ -20,7 +20,7 @@ const WorkerCard = (props) => (
     <CardText>
       Heart Rate: {props.worker.value[props.worker.value.length-1].heartRate.toFixed(0)}
       <FontIcon className="material-icons">favorite</FontIcon><br />
-      Temperature: {props.worker.value[props.worker.value.length-1].temperature.toFixed(2)} &nbsp;
+      Temperature: {props.worker.value[props.worker.value.length-1].temperature.toFixed(2)} &nbsp;F &nbsp;
       <FontIcon className="material-icons">cloud</FontIcon>
     </CardText>
 
@@ -36,8 +36,8 @@ const WorkerCard = (props) => (
       </LineChart>
 
       <div className="stats">
-        <FontIcon className="material-icons">directions_walk</FontIcon>: {props.worker.value[props.worker.value.length-1].steps}<br />
-        <FontIcon className="material-icons">whatshot</FontIcon>: {props.worker.value[props.worker.value.length-1].steps * .044} cal
+        <FontIcon className="material-icons">directions_walk</FontIcon>: {props.worker.value[props.worker.value.length-1].steps.toFixed(0)} steps<br />
+        <FontIcon className="material-icons">whatshot</FontIcon>: {(props.worker.value[props.worker.value.length-1].steps * .044).toFixed(2)} cal
       </div>
     </CardText>
   </Card>

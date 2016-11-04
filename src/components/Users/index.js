@@ -15,7 +15,7 @@ class Users extends Component {
         time: moment().format("h:mm A"),
         heartRate: (Math.random() * 120) + 60,
         temperature: (Math.random() * 20) + 80,
-        steps: 800
+        steps: (Math.random() * 1000) + 500
       });
 			this.setState({employees});
     }, 10000);
