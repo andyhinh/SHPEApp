@@ -26,7 +26,7 @@ const WorkerCard = (props) => (
 
     <CardText expandable={true}>
 
-      <LineChart width={600} height={300} data={props.worker.value} margin={{top: 5, right:30, left:20, bottom: 5}}>
+      <LineChart width={1000} height={300} data={props.worker.value} margin={{top: 5, right:30, left:20, bottom: 5}}>
         <XAxis dataKey="time"/>
         <YAxis />
         <ToolTip />
